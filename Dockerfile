@@ -4,7 +4,7 @@ FROM php:7.0-apache
 RUN a2enmod rewrite
 
 # install the PHP extensions we need
-RUN apt-get update
+RUN apt-get update \
   && apt-get install -y libpng12-dev libjpeg-dev libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick \
   && apt-get -y install libmagickwand-dev --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \

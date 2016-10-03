@@ -5,7 +5,7 @@ RUN a2enmod rewrite
 
 # install the PHP extensions we need
 RUN apt-get update \
-  && apt-get install -y libpng12-dev libjpeg-dev libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick \
+  && apt-get install -y libpng12-dev libjpeg-dev libxml2-dev libxslt-dev \
   && apt-get -y install libmagickwand-dev --no-install-recommends \
   && rm -rf /var/lib/apt/lists/* \
   && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
@@ -13,9 +13,6 @@ RUN apt-get update \
 
 # install APCu from PECL
 RUN pecl install apcu && docker-php-ext-enable apcu
-
-# install GMagick from PECL
-RUN pecl install gmagick-beta && docker-php-ext-enable gmagick
 
 # install Imagick from PECL
 RUN pecl install imagick && docker-php-ext-enable imagick

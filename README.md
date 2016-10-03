@@ -14,9 +14,9 @@ This Docker should serve as a starting point for self-hosting a personal Wordpre
 
 ## Which PHP extensions come pre-loaded?
 
-`print_r( get_loaded_extensions() );`
-=
-```
+```php
+// print_r( get_loaded_extensions() );
+
 Array
 (
     [0] => Core

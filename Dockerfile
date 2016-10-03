@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev libxml2-dev li
 RUN pecl install apcu && docker-php-ext-enable apcu
 
 # install GMagick from PECL
-RUN pecl install gmagick && docker-php-ext-enable gmagick
+RUN pecl install gmagick-beta && docker-php-ext-enable gmagick
 
 # install Imagick from PECL
 RUN pecl install imagick && docker-php-ext-enable imagick

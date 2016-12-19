@@ -8,7 +8,7 @@ This Docker should serve as a starting point for self-hosting a personal Wordpre
 
 ## What is included?
 
-* Apache + PHP 7.0 + VOLUME ( thanks to https://hub.docker.com/_/php/ )
+* Apache + PHP 7.1 + VOLUME ( thanks to https://hub.docker.com/_/php/ )
 * Some PHP extensions enabled ( see below )
 * Apache mod_rewrite enabled
 

@@ -1,9 +1,9 @@
 # Magento Docker
 # PHP Docker for Woocommerce on Steroids
 #
-# VERSION 0.1
+# VERSION 0.2
 
-FROM php:7.0-apache
+FROM php:7.1-apache
 MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
 
 LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.1"

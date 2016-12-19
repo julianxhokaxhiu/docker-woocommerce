@@ -6,7 +6,7 @@
 FROM php:7.1-apache
 MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
 
-LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.1"
+LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.2"
 
 # enable mod_rewrite
 RUN a2enmod rewrite

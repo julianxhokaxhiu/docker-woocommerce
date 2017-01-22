@@ -1,4 +1,4 @@
-# Magento Docker
+# Woocommerce Docker
 # PHP Docker for Woocommerce on Steroids
 #
 # VERSION 0.2

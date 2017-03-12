@@ -1,4 +1,4 @@
-# WooCommerce-Docker
+# docker-woocommerce
 PHP Docker for Woocommerce on Steroids
 
 ## Why?

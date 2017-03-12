@@ -24,6 +24,10 @@ RUN pecl install apcu && docker-php-ext-enable apcu
 # install GMagick from PECL
 RUN pecl install gmagick-beta && docker-php-ext-enable gmagick
 
+# Download WordPress CLI
+RUN curl -L "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar" > /usr/bin/wp \
+    && chmod +x /usr/bin/wp
+
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \

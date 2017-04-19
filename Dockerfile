@@ -53,4 +53,20 @@ RUN { \
     echo "TraceEnable off"; \
   } >> /etc/apache2/apache2.conf
 
+RUN { \
+    echo "expose_php = Off"; \
+    echo "display_startup_errors = off"; \
+    echo "display_errors = off"; \
+    echo "html_errors = off"; \
+    echo "log_errors = off"; \
+    echo "ignore_repeated_errors = off"; \
+    echo "ignore_repeated_source = off"; \
+    echo "report_memleaks = on"; \
+    echo "track_errors = on"; \
+    echo "docref_root = 0"; \
+    echo "docref_ext = 0"; \
+    echo "error_reporting = -1"; \
+    echo "log_errors_max_len = 0"; \
+  } > /usr/local/etc/php/conf.d/security.ini
+
 VOLUME /var/www/html

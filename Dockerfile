@@ -8,8 +8,9 @@ MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
 
 LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.2"
 
-# enable mod_rewrite
-RUN a2enmod rewrite
+# enable extra Apache modules
+RUN a2enmod rewrite \
+  && a2enmod headers
 
 # install the PHP extensions we need
 RUN apt-get update \
@@ -48,12 +49,6 @@ RUN { \
 
 # Iron the security of the Docker
 RUN { \
-    echo "ServerSignature Off"; \
-    echo "ServerTokens Prod"; \
-    echo "TraceEnable off"; \
-  } >> /etc/apache2/apache2.conf
-
-RUN { \
     echo "expose_php = Off"; \
     echo "display_startup_errors = off"; \
     echo "display_errors = off"; \
@@ -68,5 +63,11 @@ RUN { \
     echo "error_reporting = -1"; \
     echo "log_errors_max_len = 0"; \
   } > /usr/local/etc/php/conf.d/security.ini
+
+RUN { \
+    echo "ServerSignature Off"; \
+    echo "ServerTokens Prod"; \
+    echo "TraceEnable off"; \
+  } >> /etc/apache2/apache2.conf
 
 VOLUME /var/www/html

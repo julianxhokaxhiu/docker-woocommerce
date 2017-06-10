@@ -20,10 +20,10 @@ RUN apt-get update \
   && docker-php-ext-install gd json mysqli pdo pdo_mysql opcache gettext exif calendar soap xsl sockets wddx
 
 # install APCu from PECL
-RUN pecl install apcu && docker-php-ext-enable apcu
+RUN pecl -vvv install apcu && docker-php-ext-enable apcu
 
 # install GMagick from PECL
-RUN pecl install gmagick-beta && docker-php-ext-enable gmagick
+RUN pecl -vvv install gmagick-beta && docker-php-ext-enable gmagick
 
 # Download WordPress CLI
 RUN curl -L "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar" > /usr/bin/wp \

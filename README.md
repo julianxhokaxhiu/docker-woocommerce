@@ -3,7 +3,7 @@ PHP Docker for Woocommerce on Steroids
 
 ## Why?
 
-I didn't found any Automated Build that was offering such a simple docker in the whole Hub, so I decided to create it myself.
+I didn't find any Automated Build that was offering such a simple docker in the whole Hub, so I decided to create it myself.
 This Docker should serve as a starting point for self-hosting a personal Wordpress/WooCommerce installation.
 
 ## What is included?

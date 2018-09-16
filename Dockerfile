@@ -3,10 +3,13 @@
 #
 # VERSION 0.2
 
-FROM php:7.1-apache
+FROM php:7.2-apache
 MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
 
 LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.2"
+
+# Add pngout binary
+ADD ./pngout-static /usr/bin/pngout
 
 # enable extra Apache modules
 RUN a2enmod rewrite \
@@ -14,10 +17,34 @@ RUN a2enmod rewrite \
 
 # install the PHP extensions we need
 RUN apt-get update \
-  && apt-get install -y libpng12-dev libjpeg-dev libxml2-dev libxslt-dev libgraphicsmagick1-dev graphicsmagick \
+  && apt-get install -y \
+      libpng12-dev \
+      libjpeg-dev \
+      libxml2-dev \
+      libxslt-dev \
+      libgraphicsmagick1-dev \
+      graphicsmagick \
+      libjpeg-turbo-progs \
+      optipng \
+      pngquant \
+      gifsicle \
+      webp \
   && rm -rf /var/lib/apt/lists/* \
   && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
-  && docker-php-ext-install gd json mysqli pdo pdo_mysql opcache gettext exif calendar soap xsl sockets wddx
+  && docker-php-ext-install \
+      gd \
+      json \
+      mysqli \
+      pdo \
+      pdo_mysql \
+      opcache \
+      gettext \
+      exif \
+      calendar \
+      soap \
+      xsl \
+      sockets \
+      wddx
 
 # install APCu from PECL
 RUN pecl -vvv install apcu && docker-php-ext-enable apcu

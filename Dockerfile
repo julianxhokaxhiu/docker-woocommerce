@@ -44,7 +44,8 @@ RUN apt-get update \
       soap \
       xsl \
       sockets \
-      wddx
+      wddx \
+      less
 
 # install APCu from PECL
 RUN pecl -vvv install apcu && docker-php-ext-enable apcu

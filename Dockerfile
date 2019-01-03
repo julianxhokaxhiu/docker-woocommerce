@@ -81,6 +81,7 @@ RUN { \
     echo "display_errors = off"; \
     echo "html_errors = off"; \
     echo "log_errors = off"; \
+    echo "error_log = /dev/stderr"; \
     echo "ignore_repeated_errors = off"; \
     echo "ignore_repeated_source = off"; \
     echo "report_memleaks = on"; \

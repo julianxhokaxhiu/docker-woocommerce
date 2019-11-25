@@ -1,12 +1,12 @@
 # Woocommerce Docker
 # PHP Docker for Woocommerce on Steroids
 #
-# VERSION 0.3
+# VERSION 0.4
 
-FROM php:7.2-apache
+FROM php:7.3-apache
 MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
 
-LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.3"
+LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.4"
 
 # Add pngout binary
 ADD ./pngout-static /usr/bin/pngout

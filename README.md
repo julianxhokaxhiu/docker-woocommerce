@@ -1,4 +1,5 @@
 # docker-woocommerce
+
 PHP Docker for Woocommerce on Steroids
 
 ## Why?
@@ -8,9 +9,9 @@ This Docker should serve as a starting point for self-hosting a personal Wordpre
 
 ## What is included?
 
-* Apache + PHP 7.3 + VOLUME ( thanks to https://hub.docker.com/_/php/ ) + [WP-CLI](http://wp-cli.org/)
-* Some PHP extensions enabled ( see below )
-* Apache mod_rewrite enabled
+- Apache + PHP 7.4 + VOLUME ( thanks to https://hub.docker.com/_/php/ ) + [WP-CLI](http://wp-cli.org/)
+- Some PHP extensions enabled ( see below )
+- Apache mod_rewrite enabled
 
 ## Which PHP extensions come pre-loaded?
 
@@ -61,11 +62,11 @@ Array
     [39] => pdo_mysql
     [40] => soap
     [41] => sockets
-    [42] => wddx
-    [43] => xsl
-    [44] => Zend OPcache
+    [42] => xsl
+    [43] => Zend OPcache
 )
 ```
 
 ## License
+
 See [LICENSE](LICENSE)

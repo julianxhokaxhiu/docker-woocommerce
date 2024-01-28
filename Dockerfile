@@ -2,7 +2,8 @@
 # PHP Docker for Woocommerce on Steroids
 
 FROM php:7.4-apache
-MAINTAINER Julian Xhokaxhiu <info [at] julianxhokaxhiu [dot] com>
+
+LABEL org.opencontainers.image.authors="Julian Xhokaxhiu <github.com/julianxhokaxhiu>"
 
 LABEL Description="PHP Docker for Woocommerce on Steroids" Vendor="Julian Xhokaxhiu" Version="0.6"
 

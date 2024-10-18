@@ -64,6 +64,7 @@ Array
     [41] => sockets
     [42] => xsl
     [43] => Zend OPcache
+    [44] => zip
 )
 ```
 

@@ -22,6 +22,7 @@ RUN apt-get update \
   libxml2-dev \
   libxslt-dev \
   libgraphicsmagick1-dev \
+  libzip-dev \
   graphicsmagick \
   libjpeg-turbo-progs \
   optipng \
@@ -42,7 +43,8 @@ RUN apt-get update \
   calendar \
   soap \
   xsl \
-  sockets
+  sockets \
+  zip
 
 # install APCu from PECL
 RUN pecl -vvv install apcu && docker-php-ext-enable apcu

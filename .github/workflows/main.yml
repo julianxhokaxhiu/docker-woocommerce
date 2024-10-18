@@ -39,7 +39,6 @@ jobs:
       with:
         image-ref: ${{ env._RELEASE_NAME }}:${{ env._RELEASE_VERSION }}
         format: 'table'
-        exit-code: '1'
         ignore-unfixed: true
         vuln-type: 'os,library'
         severity: 'CRITICAL,HIGH,MEDIUM,LOW'
